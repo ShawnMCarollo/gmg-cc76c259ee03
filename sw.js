@@ -1,8 +1,8 @@
-// Golf Money Games service worker (build e3387e2ab0).
+// Golf Money Games service worker (build ca6f1ca65a).
 // Page (index.html) is network-first so a new build shows up on the next open; falls back to cache offline.
 // Other files are versioned (app.js?v=build) and served cache-first.
-const CACHE = "golf-money-games-e3387e2ab0";
-const ASSETS = ["./", "index.html", "app.js?v=e3387e2ab0", "manifest.json", "apple-touch-icon.png", "favicon.png",
+const CACHE = "golf-money-games-ca6f1ca65a";
+const ASSETS = ["./", "index.html", "app.js?v=ca6f1ca65a", "manifest.json", "apple-touch-icon.png", "favicon.png",
   "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS.map((u) => new Request(u, { cache: "reload" })))).then(() => self.skipWaiting()));
